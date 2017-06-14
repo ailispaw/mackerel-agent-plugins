@@ -42,6 +42,7 @@ import (
 	"github.com/mackerelio/mackerel-agent-plugins/mackerel-plugin-plack/lib"
 	"github.com/mackerelio/mackerel-agent-plugins/mackerel-plugin-postgres/lib"
 	"github.com/mackerelio/mackerel-agent-plugins/mackerel-plugin-proc-fd/lib"
+	"github.com/mackerelio/mackerel-agent-plugins/mackerel-plugin-prometheus/lib"
 	"github.com/mackerelio/mackerel-agent-plugins/mackerel-plugin-rabbitmq/lib"
 	"github.com/mackerelio/mackerel-agent-plugins/mackerel-plugin-redis/lib"
 	"github.com/mackerelio/mackerel-agent-plugins/mackerel-plugin-snmp/lib"
@@ -135,6 +136,8 @@ func runPlugin(plug string) error {
 		mppostgres.Do()
 	case "proc-fd":
 		mpprocfd.Do()
+	case "prometheus":
+		mpprometheus.Do()
 	case "rabbitmq":
 		mprabbitmq.Do()
 	case "redis":
@@ -206,6 +209,7 @@ var plugins = []string{
 	"plack",
 	"postgres",
 	"proc-fd",
+	"prometheus",
 	"rabbitmq",
 	"redis",
 	"snmp",
