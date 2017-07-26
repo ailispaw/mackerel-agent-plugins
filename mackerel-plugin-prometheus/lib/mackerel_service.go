@@ -30,5 +30,5 @@ func SendMetricsToMackerelService(optApiKey string, optServiceName string, metri
 		log.Fatal(fmt.Sprintf("Mackerel API: %s: %s", url, resp.Status))
 	}
 
-	log.Printf("[Prometheus]: Sent to \"%s\" Service\n", optServiceName)
+	log.Printf("[Prometheus]: Sent to \"%s\" Service", optServiceName)
 }

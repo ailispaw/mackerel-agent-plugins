@@ -109,7 +109,7 @@ func Do() {
 	}
 
 	if len(metrics) > 0 {
-		log.Printf("[Prometheus]: %s on %s\n", optPrometheusApiQuery,
+		log.Printf("[Prometheus]: %s on %s", optPrometheusApiQuery,
 			model.TimeFromUnix(metrics[0].Time).Time().Format(time.UnixDate))
 
 		if optMackerelServiceName != "" {
